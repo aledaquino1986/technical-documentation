@@ -1,0 +1,165 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+* {
+  scrollbar-width: thin;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Section General stylings */
+
+.container {
+  display: flex;
+
+  background-color: blanchedalmond;
+}
+
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: fixed;
+  overflow: scroll;
+  top: 0;
+  bottom: 0;
+  width: 22%;
+  border-right: 5px solid rgba(95, 90, 90, 0.849);
+  background-color: #dddddd;
+}
+
+#main-doc {
+  width: 100%;
+  padding-left: 23%;
+  color: whitesmoke;
+  background-color: rgb(31, 114, 114);
+}
+
+/*nav stylings */
+
+#navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.header {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.header__topic {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 3rem;
+  transition: all 0.5s;
+}
+
+.header__topic:hover {
+  background-color: rgba(255, 255, 255, 0.849);
+  font-size: 2.5rem;
+}
+
+.header__topic:first-of-type {
+  border-top: 2px solid black;
+}
+.header__topic:not(:last-child) {
+  border-bottom: 2px solid black;
+}
+
+.header__topic a:link,
+.header__topic a:visited {
+  text-decoration: none;
+  color: rgb(26, 24, 24);
+}
+
+.header__topic a:link:hover,
+.header__topic a:visited:hover {
+  color: rgb(15, 10, 10);
+  font-size: 700;
+}
+
+/* Code */
+
+code {
+  background-color: black;
+  color: green;
+  font-size: 1.8rem;
+  white-space: pre;
+  margin: 1rem;
+  display: block;
+}
+
+/* Styling main */
+
+.main-section {
+  padding: 2rem;
+}
+
+.main-section h2 {
+  font-size: 3.5rem;
+  color: whitesmoke;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.main-section p {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+ol,
+ul {
+  padding-top: 2rem;
+}
+
+ol {
+  padding-left: 4rem;
+}
+
+ul {
+  padding-left: 4rem;
+}
+
+/*styling code*/
+
+.language-javascript {
+  background-color: rgb(224, 208, 208);
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 2rem;
+}
+
+.blue-function {
+  color: rgb(44, 44, 180);
+}
+
+.green-js {
+  color: rgb(34, 131, 34);
+}
+
+.red-method {
+  color: rgb(184, 60, 60);
+}
