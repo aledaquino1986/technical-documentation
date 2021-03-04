@@ -26,7 +26,7 @@ body {
 
 .container {
   display: flex;
-
+  flex-direction: column;
   background-color: blanchedalmond;
 }
 
@@ -34,18 +34,17 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  position: fixed;
+
   overflow: scroll;
   top: 0;
   bottom: 0;
-  width: 22%;
-  border-right: 5px solid rgba(95, 90, 90, 0.849);
+  border-right: none;
   background-color: #dddddd;
 }
 
 #main-doc {
-  width: 100%;
-  padding-left: 23%;
+  width: 100vw;
+
   color: whitesmoke;
   background-color: rgb(31, 114, 114);
 }
@@ -60,7 +59,7 @@ body {
   font-size: 2rem;
 }
 
-.header {
+#header {
   margin-bottom: 3rem;
   font-size: 2rem;
   font-weight: 800;
@@ -109,6 +108,11 @@ code {
   white-space: pre;
   margin: 1rem;
   display: block;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
 }
 
 /* Styling main */
@@ -118,6 +122,8 @@ code {
 }
 
 .main-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
   font-size: 3.5rem;
   color: whitesmoke;
   text-decoration: underline;
@@ -152,6 +158,12 @@ ul {
   margin: 2rem;
 }
 
+code,
+.language-javascript {
+  font-size: 1.3rem;
+  padding: 1rem;
+}
+
 .blue-function {
   color: rgb(44, 44, 180);
 }
@@ -162,4 +174,41 @@ ul {
 
 .red-method {
   color: rgb(184, 60, 60);
+}
+
+/*Media queries*/
+@media only screen and (min-width: 755px) {
+  #main-doc {
+    width: 100%;
+    padding-left: 23%;
+    color: whitesmoke;
+    background-color: rgb(31, 114, 114);
+  }
+
+  .navbar-container {
+    position: fixed;
+    overflow: scroll;
+    top: 0;
+    bottom: 0;
+    width: 22%;
+    border-right: 5px solid rgba(95, 90, 90, 0.849);
+  }
+
+  /* .navbar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: fixed;
+  overflow: scroll;
+  top: 0;
+  bottom: 0;
+  width: 22%;
+  border-right: 5px solid rgba(95, 90, 90, 0.849);
+  background-color: #dddddd;
+} */
+
+  code,
+  .language-javascript {
+    font-size: 1.6rem;
+  }
 }
